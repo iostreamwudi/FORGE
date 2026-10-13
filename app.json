@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "FORGE",
+    "slug": "forge",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "forge",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.forge.strength"
+    },
+    "android": {
+      "package": "com.forge.strength",
+      "adaptiveIcon": {
+        "backgroundColor": "#0B0B0D"
+      },
+      "predictiveBackGestureEnabled": true
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-audio",
+      "expo-notifications",
+      "@react-native-community/datetimepicker",
+      [
+        "@kingstinct/react-native-healthkit",
+        {
+          "NSHealthShareUsageDescription": "FORGE 读取你授权的健康数据，用于展示真实恢复状态。",
+          "NSHealthUpdateUsageDescription": "FORGE 当前不会写入健康数据。",
+          "background": true
+        }
+      ],
+      "react-native-health-connect",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36,
+            "minSdkVersion": 26
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "icon": "./assets/forge-logo.png",
+    "splash": {
+      "image": "./assets/forge-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B0B0D"
+    },
+    "web": {
+      "favicon": "./assets/forge-logo.png"
+    },
+    "extra": {
+      "forgeApiUrl": "https://forge.iamwudi.ltd"
+    }
+  }
+}
